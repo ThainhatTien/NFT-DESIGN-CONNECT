@@ -15,10 +15,12 @@
 
 				<div class="col-lg-8 col-12 text-center mx-auto">
 					<div class="hero-section-text">
-						<small class="section-small-title">Welcome to NFT Design Connect <i class="hero-icon bi-house"></i>
+						<small class="section-small-title">Welcome to NFT Design
+							Connect <i class="hero-icon bi-house"></i>
 						</small>
 
-						<h1 class="hero-title text-white mt-2 mb-4">Beautiful designs for your living space</h1>
+						<h1 class="hero-title text-white mt-2 mb-4">Beautiful designs
+							for your living space</h1>
 
 						<form class="custom-form hero-form" action="#" method="get"
 							role="form">
@@ -44,21 +46,13 @@
 										</select>
 									</div>
 								</div>
-
 								<div class="col-lg-2 col-md-6 col-12">
 									<button type="submit" class="form-control">Search</button>
 								</div>
 							</div>
 						</form>
-
-						<div
-							class="hero-btn d-flex justify-content-center align-items-center">
-							<a class="bi-arrow-down hero-btn-link smoothscroll"
-								href="#section_2"></a>
-						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</section>

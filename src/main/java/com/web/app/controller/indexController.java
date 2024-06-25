@@ -15,8 +15,29 @@ public class indexController {
 		return "shop-detail";
 	}
 	
-	@RequestMapping("/shoplisting")
+	@RequestMapping("/shop")
 	public String displayShopListing() {
-		return "shop-listing";
+		return "shop";
+	}
+	
+	@RequestMapping("/contact")
+	public String displayContact() {
+		return "contact";
+	}
+	
+	@RequestMapping("/about")
+	public String displayAbout() {
+		return "about";
+	}
+	
+	@RequestMapping("/profile")
+	public String displayProfile() {
+		return "profile";
+	}
+	
+	@RequestMapping("/cart")
+	public String displayCart() {
+		return "cart";
 	}
 }
+ 

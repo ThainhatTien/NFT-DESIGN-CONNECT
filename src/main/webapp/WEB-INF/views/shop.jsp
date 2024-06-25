@@ -7,7 +7,7 @@
 <meta name="description" content="">
 <meta name="author" content="Tooplate">
 
-<title>Moso Interior - Product Listing Page</title>
+<title>NFT Design Connect - Product</title>
 
 <!-- CSS FILES -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +47,7 @@ Bootstrap 5 HTML CSS Template
 				<div class="row">
 
 					<div class="col-lg-12 col-12">
-						<h1 class="text-white">Shop Listing</h1>
+						<h1 class="text-white">Shop</h1>
 					</div>
 
 				</div>
