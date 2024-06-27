@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,6 +27,17 @@
 <link href="css/owl.carousel.min.css" rel="stylesheet">
 
 <link href="css/tooplate-moso-interior.css" rel="stylesheet">
+<style type="text/css">
+.icon-hover:hover {
+	border-color: #3b71ca !important;
+	background-color: white !important;
+	color: #3b71ca !important;
+}
+
+.icon-hover:hover i {
+	color: #3b71ca !important;
+}
+</style>
 <!--
 
 Tooplate 2133 Moso Interior
@@ -56,296 +67,230 @@ Bootstrap 5 HTML CSS Template
 			</div>
 		</header>
 
-		<section class="shop-detail-bar section-bg">
+		<!-- content -->
+		<section class="py-5">
 			<div class="container">
-				<div class="row">
+				<div class="row gx-5">
+					<aside class="col-lg-6">
+						<div class="border rounded-4 mb-3 d-flex justify-content-center">
+							<a data-fslightbox="mygalley" class="rounded-4" target="_blank"
+								data-type="image"
+								href="#">
+								<img style="max-width: 100%; max-height: 100vh; margin: auto;"
+								class="rounded-4 fit"
+								src="/images/1.png" />
+							</a>
+						</div>
+						<div class="d-flex justify-content-center mb-3">
+							<a data-fslightbox="mygalley" class="border mx-1 rounded-2"
+								target="_blank" data-type="image"
+								href="#"
+								class="item-thumb"> <img width="60" height="60"
+								class="rounded-2"
+								src="/images/2.png" />
+							</a> <a data-fslightbox="mygalley" class="border mx-1 rounded-2"
+								target="_blank" data-type="image"
+								href="#"
+								class="item-thumb"> <img width="60" height="60"
+								class="rounded-2"
+								src="/images/3.png" />
+							</a> <a data-fslightbox="mygalley" class="border mx-1 rounded-2"
+								target="_blank" data-type="image"
+								href="#"
+								class="item-thumb"> <img width="60" height="60"
+								class="rounded-2"
+								src="/images/4.png" />
+							</a> <a data-fslightbox="mygalley" class="border mx-1 rounded-2"
+								target="_blank" data-type="image"
+								href="#"
+								class="item-thumb"> <img width="60" height="60"
+								class="rounded-2"
+								src="/images/5.png" />
+							</a> <a data-fslightbox="mygalley" class="border mx-1 rounded-2"
+								target="_blank" data-type="image"
+								href="#"
+								class="item-thumb"> <img width="60" height="60"
+								class="rounded-2"
+								src="/images/6.png" />
+							</a>
+						</div>
+						<!-- thumbs-wrap.// -->
+						<!-- gallery-wrap .end// -->
+					</aside>
+					<main class="col-lg-6">
+						<div class="ps-lg-3">
+							<h4 class="title text-dark">
+								NHÀ Ở 1 TẦNG, 20.5X9.5M
+							</h4>
+							<div class="d-flex flex-row my-3">
+								<div class="text-warning mb-1 me-2">
+									<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+										class="fa fa-star"></i> <i class="fa fa-star"></i> <i
+										class="fas fa-star-half-alt"></i> <span class="ms-1">
+										4.5 </span>
+								</div>
+							</div>
 
-					<div class="col-lg-7 col-md-8 col-12 d-flex">
-						<p class="shop-detail-bar-wrap d-flex flex-wrap mb-0">
-							<span class="me-2">Price:</span> <strong
-								class="shop-pricing-text">$4,500</strong>
-						</p>
+							<div class="mb-3">
+								<span class="h5">$75.00</span>
+							</div>
 
-						<p class="shop-detail-bar-wrap d-flex flex-wrap ms-lg-5 ms-4 mb-0">
-							<span class="me-2">Condition:</span> <strong
-								class="shop-condition-text">Good</strong>
-						</p>
+							<p>Modern look and quality demo item is a streetwear-inspired
+								collection that continues to break away from the conventions of
+								mainstream fashion. Made in Italy, these black and brown
+								clothing low-top shirts for men.</p>
 
-						<p class="shop-detail-bar-wrap d-flex flex-wrap ms-lg-5 ms-4 mb-0">
-							<span class="me-2">Type:</span> <strong>Family</strong>
-						</p>
-					</div>
+							<div class="row">
+								<dt class="col-3">Mẫu nhà:</dt>
+								<dd class="col-9">Nhà cấp 4</dd>
 
-					<div
-						class="col-lg-5 col-md-4 col-12 social-share d-flex align-items-center ms-lg-auto mt-3 mt-lg-0 mt-md-0">
-						<p class="mb-0 me-3 ms-lg-auto ms-md-auto">Share:</p>
+								<dt class="col-3">Phong cách</dt>
+								<dd class="col-9">Hiện đại</dd>
 
-						<ul class="social-icon">
-							<li class="social-icon-item"><a href="#"
-								class="social-icon-link social-icon-twitter bi-twitter"></a></li>
+								<dt class="col-3">Loại hình</dt>
+								<dd class="col-9">Nhà phố</dd>
 
-							<li class="social-icon-item"><a href="#"
-								class="social-icon-link social-icon-facebook bi-facebook"></a></li>
+								<dt class="col-3">Nhà thiết kế</dt>
+								<dd class="col-9">Tiến Designer</dd>
+							</div>
 
-							<li class="social-icon-item"><a href="#"
-								class="social-icon-link social-icon-pinterest bi-pinterest"></a>
-							</li>
-						</ul>
-					</div>
+							<hr />
+							
+							<a href="#" class="btn btn-warning shadow-0"> Buy now </a> <a
+								href="#" class="btn btn-primary shadow-0"> <i
+								class="me-1 fa fa-shopping-basket"></i> Add to cart
+							</a> <a href="#"
+								class="btn btn-light border border-secondary py-2 icon-hover px-3">
+								<i class="me-1 fa fa-heart fa-lg"></i> Save
+							</a>
+						</div>
+					</main>
 				</div>
 			</div>
 		</section>
+		<!-- content -->
 
-		<section class="shop-detail-section section-padding">
+		<section class="bg-light border-top py-4">
 			<div class="container">
-				<div class="row">
+				<div class="row gx-4">
+					<div class="col-lg-8 mb-4">
+						<div class="border rounded-2 px-3 py-2 bg-white">
+							<!-- Pills navs -->
+							<h3>Thông số kĩ thuật</h3>
+							<!-- Pills navs -->
 
-					<div class="col-lg-6 col-12 m-auto">
-						<div class="custom-block shop-detail-custom-block">
-							<h3 class="mb-3">Introduction to a Dining Room</h3>
-
-							<p>Moso Interior is a free Bootstrap 5 HTML CSS template for
-								your website. You are free to use this template for your
-								commercial websites.</p>
-
-							<p>Tooplate is one of the best websites to download 100% free
-								HTML Templates for web designers and developers around the
-								world. Thank you for visiting.</p>
-						</div>
-					</div>
-
-					<div class="col-lg-6 col-12">
-						<div class="shop-image-wrap">
-							<img
-								src="images/shop/mock-up-poster-modern-dining-room-interior-design-with-white-empty-wall.jpg"
-								class="shop-image img-fluid" alt="">
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</section>
-
-		<section class="shop-detail-section section-padding section-bg">
-			<div class="container">
-				<div class="row">
-
-					<div class="col-lg-6 col-12">
-						<div class="shop-image-wrap">
-							<img
-								src="images/shop/minimal-bathroom-interior-design-with-wooden-furniture.jpg"
-								class="shop-image img-fluid" alt="">
-						</div>
-					</div>
-
-					<div class="col-lg-6 col-12 m-auto">
-						<div class="custom-block shop-detail-custom-block">
-							<h3 class="mb-3">Online Interior Design</h3>
-
-							<p>Lorem Ipsum dolor sit amet, consectetur adipsicing kengan
-								omeg kohm tokito adipcingi elit, sed do eismuod larehai med.</p>
-
-							<p>Sed ut perspiciatis unde omnis iste natus error sit
-								voluptatem accusantium doloremque laudantium, totam rem aperiam,
-								eaque ipsa quae ab illo inventore veritatis et quasi</p>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</section>
-
-		<section class="shop-detail-section section-padding pb-0">
-			<div class="container">
-				<div class="row">
-
-					<div class="col-lg-4 col-12">
-						<div class="shop-thumb">
-							<div class="shop-image-wrap">
-								<img
-									src="images/shop/green-sofa-white-living-room-with-blank-table-mockup.jpg"
-									class="shop-image img-fluid" alt="">
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-12">
-						<div class="shop-thumb">
-							<div class="shop-image-wrap">
-								<img src="images/shop/concept-home-cooking-with-female-chef.jpg"
-									class="shop-image img-fluid" alt="">
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-12">
-						<div class="shop-thumb">
-							<div class="shop-image-wrap">
-								<img
-									src="images/shop/childrens-bed-nursery-cot-velvet-childrens-room.jpg"
-									class="shop-image img-fluid" alt="">
-							</div>
-						</div>
-					</div>
-
-				</div>
-			</div>
-		</section>
-
-		<section class="reviews-section section-padding pb-0" id="section_4">
-			<div class="container">
-				<div class="row">
-
-					<div class="col-lg-12 col-12">
-						<h2 class="mt-2 mb-4">Reviews</h2>
-
-						<div class="owl-carousel reviews-carousel">
-							<div class="reviews-thumb">
-								<div class="reviews-body">
-									<h4>Moso Interior is the most suitable website layout.</h4>
+							<!-- Pills content -->
+							<div class="tab-content" id="ex1-content">
+								<div class="tab-pane fade show active" id="ex1-pills-1"
+									role="tabpanel" aria-labelledby="ex1-tab-1">
+									<table class="table border mt-3 mb-2">
+										<tr>
+											<th class="py-2">Số tần:</th>
+											<td class="py-2">1</td>
+										</tr>
+										<tr>
+											<th class="py-2">Diện tích:</th>
+											<td class="py-2">200m2</td>
+										</tr>
+										<tr>
+											<th class="py-2">Chiều dài:</th>
+											<td class="py-2">9.5m</td>
+										</tr>
+										<tr>
+											<th class="py-2">Phong cách</th>
+											<td class="py-2">Hiện đại</td>
+										</tr>
+										<tr>
+											<th class="py-2">Thiết kế bởi</th>
+											<td class="py-2">Tiến Designer</td>
+										</tr>
+										<tr>
+											<th class="py-2">Phòng ngủ:</th>
+											<td class="py-2">4</td>
+										</tr>
+										<tr>
+											<th class="py-2">Mặt tiền:</th>
+											<td class="py-2">20.0m</td>
+										</tr>
+										<tr>
+											<th class="py-2">Loại hình:</th>
+											<td class="py-2">Nhà phố</td>
+										</tr>
+										<tr>
+											<th class="py-2">Chi phí</th>
+											<td class="py-2">7.5$</td>
+										</tr>
+										<tr>
+											<th class="py-2">Mã sản phẩm</th>
+											<td class="py-2">SP001</td>
+										</tr>
+									</table>
 								</div>
-
-								<div
-									class="reviews-bottom reviews-bottom-up d-flex align-items-center">
-									<img
-										src="images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg"
-										class="avatar-image img-fluid" alt="">
-
-									<div
-										class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
-										<p class="text-white mb-0">
-											<strong>Sandy</strong>, <small>CEO</small>
-										</p>
-
-										<div class="reviews-icons">
-											<i class="bi-star-fill"></i> <i class="bi-star-fill"></i> <i
-												class="bi-star-fill"></i> <i class="bi-star-fill"></i> <i
-												class="bi-star-fill"></i>
+							</div>
+							<!-- Pills content -->
+						</div>
+					</div>
+					<div class="col-lg-4">
+						<div class="px-0 border rounded-2 shadow-0">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Một số bản thiết kế nổi bật</h5>
+									<div class="d-flex mb-3">
+										<a href="#" class="me-3"> <img
+											src="/images/nb1.png"
+											style="min-width: 96px; height: 96px;"
+											class="img-md img-thumbnail" />
+										</a>
+										<div class="info">
+											<a href="#" class="nav-link mb-1">Nhà phố 2 tầng 4 phòng ngủ 8x16.75m
+											</a> <strong class="text-dark"> $38.90</strong>
 										</div>
 									</div>
-								</div>
-							</div>
 
-							<div class="reviews-thumb">
-								<div class="reviews-body">
-									<h4>Explore more HTML Templates to download for your
-										website.</h4>
-								</div>
-
-								<div
-									class="reviews-bottom reviews-bottom-up d-flex align-items-center">
-									<img
-										src="images/avatar/studio-portrait-emotional-happy-funny-smiling-boyfriend-man-with-heavy-beard-stands-with-arms-crossed-dressed-red-t-shirt-isolated-blue.jpg"
-										class="avatar-image img-fluid" alt="">
-
-									<div
-										class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
-										<p class="text-white mb-0">
-											<strong>Jack</strong>, <small>Partner</small>
-										</p>
-
-										<div class="reviews-icons">
-											<i class="bi-star-fill"></i> <i class="bi-star-fill"></i> <i
-												class="bi-star-fill"></i> <i class="bi-star"></i> <i
-												class="bi-star"></i>
+									<div class="d-flex mb-3">
+										<a href="#" class="me-3"> <img
+											src="/images/nb2.jpg"
+											style="min-width: 96px; height: 96px;"
+											class="img-md img-thumbnail" />
+										</a>
+										<div class="info">
+											<a href="#" class="nav-link mb-1">Mẫu nhà 3 tầng 4 phòng ngủ 5x16m
+											</a> <strong class="text-dark"> $29.50</strong>
 										</div>
 									</div>
-								</div>
-							</div>
 
-							<div class="reviews-thumb">
-								<div class="reviews-body">
-									<h4>Please recommend Tooplate website to your friends.</h4>
-								</div>
-
-								<div
-									class="reviews-bottom reviews-bottom-up d-flex align-items-center">
-									<img
-										src="images/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg"
-										class="avatar-image img-fluid" alt="">
-
-									<div
-										class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
-										<p class="text-white mb-0">
-											<strong>Helen</strong>, <small>Client</small>
-										</p>
-
-										<div class="reviews-icons">
-											<i class="bi-star-fill"></i> <i class="bi-star-fill"></i> <i
-												class="bi-star-fill"></i> <i class="bi-star-fill"></i> <i
-												class="bi-star-fill"></i>
+									<div class="d-flex mb-3">
+										<a href="#" class="me-3"> <img
+											src="/images/nb3.png"
+											style="min-width: 96px; height: 96px;"
+											class="img-md img-thumbnail" />
+										</a>
+										<div class="info">
+											<a href="#" class="nav-link mb-1">Mẫu nhà phố 2 tầng 7x23m 3 phòng ngủ</a> 
+											<strong class="text-dark">$120.00</strong>
 										</div>
 									</div>
-								</div>
-							</div>
 
-							<div class="reviews-thumb">
-								<div class="reviews-body">
-									<h4>This Bootstrap 5 layout is free to use for your
-										website.</h4>
-								</div>
-
-								<div
-									class="reviews-bottom reviews-bottom-up d-flex align-items-center">
-									<img
-										src="images/avatar/portrait-young-redhead-bearded-male-wears-white-t-shirt-keeps-his-eyes-closed-smiling-feels-happy-yellow.jpg"
-										class="avatar-image img-fluid" alt="">
-
-									<div
-										class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
-										<p class="text-white mb-0">
-											<strong>Bill</strong>, <small>Designer</small>
-										</p>
-
-										<div class="reviews-icons">
-											<i class="bi-star-fill"></i> <i class="bi-star-fill"></i> <i
-												class="bi-star-fill"></i> <i class="bi-star"></i> <i
-												class="bi-star"></i>
-										</div>
-									</div>
-								</div>
-							</div>
-
-							<div class="reviews-thumb">
-								<div class="reviews-body">
-									<h4>Thank you for visiting Tooplate to download free
-										templates.</h4>
-								</div>
-
-								<div
-									class="reviews-bottom reviews-bottom-up d-flex align-items-center">
-									<img
-										src="images/avatar/portrait-young-beautiful-woman-gesticulating.jpg"
-										class="avatar-image img-fluid" alt="">
-
-									<div
-										class="d-flex align-items-center justify-content-between flex-wrap w-100 ms-3">
-										<p class="text-white mb-0">
-											<strong>Susan</strong>, <small>Boss</small>
-										</p>
-
-										<div class="reviews-icons">
-											<i class="bi-star-fill"></i> <i class="bi-star-fill"></i> <i
-												class="bi-star-fill"></i> <i class="bi-star-fill"></i> <i
-												class="bi-star-fill"></i>
+									<div class="d-flex">
+										<a href="#" class="me-3"> <img
+											src="/images/nb4.png"
+											style="min-width: 96px; height: 96px;"
+											class="img-md img-thumbnail" />
+										</a>
+										<div class="info">
+											<a href="#" class="nav-link mb-1">Mẫu nhà phố 2 tầng 3 phòng ngủ 8x11m</a> 
+											<strong class="text-dark">$339.90</strong>
 										</div>
 									</div>
 								</div>
 							</div>
 						</div>
-
-						<div class="col-lg-12 col-12">
-							<p
-								class="d-flex justify-content-center align-items-center mt-lg-5">
-								Write some reviews on <a href="#" class="custom-btn btn ms-3"><i
-									class="bi-facebook me-2"></i>facebook</a>
-							</p>
-						</div>
 					</div>
-
 				</div>
 			</div>
 		</section>
+
+		<jsp:include page="/WEB-INF/views/temple/review.jsp"></jsp:include>
 
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
 			<path fill="#36363e" fill-opacity="1"

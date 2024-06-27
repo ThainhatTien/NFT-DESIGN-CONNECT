@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,32 +33,32 @@
 							<span class="text-muted">NFT </span> Design Connect
 						</h2>
 
-						<h4 class="text-muted mb-3">NFT Design Connect is a premier platform designed for designers, collectors, and investors in digital art. We create an environment where art enthusiasts can connect, create, and trade artworks in the form of NFTs (Non-Fungible Tokens).</h4>
+						<h4 class="text-muted mb-3">NFT Design Connect là một nền tảng hàng đầu dành cho các nhà thiết kế, nhà sưu tập, và nhà đầu tư nghệ thuật số. Chúng tôi tạo ra một môi trường nơi những người yêu thích nghệ thuật có thể kết nối, tạo ra, và giao dịch các tác phẩm nghệ thuật dưới dạng NFT (Non-Fungible Token).</h4>
 						<div class="mb-4">
-							<h5>Our Mission</h5>
-							<h6>We are committed to bringing innovation and creativity to the world of digital art, providing a secure and user-friendly platform for all users. Our mission includes:</h6>
+							<h5>Sứ mệnh của chúng tôi</h5>
+							<h6>Chúng tôi cam kết mang lại sự đổi mới và sáng tạo trong thế giới nghệ thuật số, cung cấp một nền tảng an toàn và dễ sử dụng cho tất cả người dùng. Sứ mệnh của chúng tôi là:</h6>
 							<ul>
-								<li>Connecting Designers and Collectors: Creating a space where artists and designers can showcase their work and connect with art lovers worldwide.</li>
-								<li>Protecting and Authenticating Digital Art: Using blockchain technology to ensure each piece of art is unique and authenticated.</li>
-								<li>Supporting Artists and Designers: Providing tools and resources to help artists create and sell their work as NFTs easily and efficiently.</li>
+								<li>Kết nối nhà thiết kế và nhà sưu tập: Tạo ra một không gian nơi các nghệ sĩ và nhà thiết kế có thể giới thiệu tác phẩm của họ và kết nối với những người yêu nghệ thuật trên toàn thế giới.</li>
+								<li>Bảo vệ và xác thực nghệ thuật số: Sử dụng công nghệ blockchain để đảm bảo mỗi tác phẩm nghệ thuật đều là duy nhất và được xác thực.</li>
+								<li>Hỗ trợ nghệ sĩ và nhà thiết kế: Cung cấp các công cụ và tài nguyên để giúp nghệ sĩ tạo ra và bán tác phẩm của họ dưới dạng NFT một cách dễ dàng và hiệu quả.</li>
 							</ul>
 						</div>
 						<div class="mb-4">
-							<h5>Key Features</h5>
+							<h5>Các tính năng chính</h5>
 							<ul>
-								<li>Login and Security: Users can easily log in and verify their personal information through our advanced security system.</li>
-								<li>NFT Marketplace: Our platform offers a dynamic marketplace where users can buy, sell, and auction NFT artworks.</li>
-								<li>Collaboration Tools: Designers can collaborate with other artists, share ideas, and create unique works together.</li>
-								<li>Account Management: Users can easily manage personal information, investment portfolios, and track their transactions.</li>
-								<li>Support and Resources: Offering detailed information and guides on NFTs to help new users easily join and understand the world of digital art.</li>
+								<li>Đăng nhập và bảo mật: Người dùng có thể dễ dàng đăng nhập và xác thực thông tin cá nhân thông qua hệ thống bảo mật tiên tiến của chúng tôi.</li>
+								<li>Thị trường NFT: Nền tảng của chúng tôi cung cấp một thị trường năng động nơi người dùng có thể mua, bán, và đấu giá các tác phẩm nghệ thuật NFT.</li>
+								<li>Công cụ hợp tác: Nhà thiết kế có thể hợp tác với các nghệ sĩ khác, chia sẻ ý tưởng và cùng nhau tạo ra những tác phẩm độc đáo.</li>
+								<li>Quản lý tài khoản: Người dùng có thể quản lý thông tin cá nhân, danh mục đầu tư và theo dõi các giao dịch của mình một cách dễ dàng.</li>
+								<li>Hỗ trợ và tài nguyên: Cung cấp thông tin và hướng dẫn chi tiết về NFT, giúp người dùng mới dễ dàng tham gia và hiểu rõ hơn về thế giới nghệ thuật số.</li>
 							</ul>
 						</div>
 						<div class="mb-4">
-							<h5>Why Choose NFT Design Connect?</h5>
+							<h5>Tại sao chọn NFT Design Connect?</h5>
 							<ul>
-								<li>Reliability and Security: Using advanced blockchain technology to ensure every transaction is safe and transparent.</li>
-								<li>Comprehensive Support: Our professional support team is always ready to answer your questions.</li>
-								<li>Dynamic Community: Join a large community of art and technology enthusiasts where you can learn and share experiences.</li>
+								<li>Độ tin cậy và bảo mật: Sử dụng công nghệ blockchain tiên tiến để đảm bảo mỗi giao dịch đều an toàn và minh bạch</li>
+								<li>Hỗ trợ toàn diện: Đội ngũ hỗ trợ chuyên nghiệp luôn sẵn sàng giải đáp mọi thắc mắc của bạn.</li>
+								<li>Cộng đồng năng động: Tham gia vào một cộng đồng lớn gồm những người yêu nghệ thuật và công nghệ, nơi bạn có thể học hỏi và chia sẻ kinh nghiệm.</li>
 							</ul>
 						</div>
 					</div>

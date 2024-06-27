@@ -74,7 +74,7 @@
 						<div class="shop-thumb">
 							<div class="shop-image-wrap">
 								<a href="/shopdetail"> <img
-									src="images/shop/minimal-bathroom-interior-design-with-wooden-furniture.jpg"
+									src="/images/nb1.png"
 									class="shop-image img-fluid" alt="">
 								</a>
 
@@ -97,7 +97,7 @@
 							</div>
 
 							<div class="shop-body">
-								<h4>Bathroom</h4>
+								<h4>Nhà phố 2 tầng 4 phòng ngủ 8x16.75m</h4>
 							</div>
 						</div>
 					</div>
@@ -106,7 +106,7 @@
 						<div class="shop-thumb">
 							<div class="shop-image-wrap">
 								<a href="shop-detail.html"> <img
-									src="images/shop/mock-up-poster-modern-dining-room-interior-design-with-white-empty-wall.jpg"
+									src="/images/nb2.jpg"
 									class="shop-image img-fluid" alt="">
 								</a>
 
@@ -129,7 +129,7 @@
 							</div>
 
 							<div class="shop-body">
-								<h4>Dining</h4>
+								<h4>Mẫu nhà 3 tầng 4 phòng ngủ 5x16m</h4>
 							</div>
 						</div>
 					</div>
@@ -138,7 +138,7 @@
 						<div class="shop-thumb">
 							<div class="shop-image-wrap">
 								<a href="shop-detail.html"> <img
-									src="images/shop/green-sofa-white-living-room-with-blank-table-mockup.jpg"
+									src="/images/nb3.png"
 									class="shop-image img-fluid" alt="">
 								</a>
 
@@ -161,7 +161,7 @@
 							</div>
 
 							<div class="shop-body">
-								<h4>Living Room</h4>
+								<h4>Mẫu nhà phố 2 tầng 7x23m 3 phòng ngủ</h4>
 							</div>
 						</div>
 					</div>
@@ -170,7 +170,7 @@
 						<div class="shop-thumb">
 							<div class="shop-image-wrap">
 								<a href="shop-detail.html"> <img
-									src="images/shop/concept-home-cooking-with-female-chef.jpg"
+									src="/images/nb4.png"
 									class="shop-image img-fluid" alt="">
 								</a>
 
@@ -193,7 +193,7 @@
 							</div>
 
 							<div class="shop-body">
-								<h4>Chef Kitchen</h4>
+								<h4>Mẫu nhà phố 2 tầng 3 phòng ngủ 8x11m</h4>
 							</div>
 						</div>
 					</div>
@@ -202,7 +202,7 @@
 						<div class="shop-thumb">
 							<div class="shop-image-wrap">
 								<a href="shop-detail.html"> <img
-									src="images/shop/childrens-bed-nursery-cot-velvet-childrens-room.jpg"
+									src="/images/nb5.png"
 									class="shop-image img-fluid" alt="">
 								</a>
 
@@ -225,7 +225,7 @@
 							</div>
 
 							<div class="shop-body">
-								<h4>Childrens Bedroom</h4>
+								<h4>Mẫu nhà phố 2 tầng 9x18m 4 phòng ngủ</h4>
 							</div>
 						</div>
 					</div>

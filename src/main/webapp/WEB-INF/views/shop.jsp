@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -66,23 +68,22 @@ Bootstrap 5 HTML CSS Template
 
 								<select name="looking-for" class="form-select form-control"
 									id="looking-for" aria-label="Default select example">
-									<option value="0" selected>What you looking for?</option>
-									<option value="1">Bathroom</option>
-									<option value="2">Dining</option>
-									<option value="3">Living Room</option>
-									<option value="4">Children Bedroom</option>
-									<option value="5">Kitchen</option>
+									<option value="0" selected>Những gì bạn đang tìm kiếm?</option>
+									<option value="1">Mẫu nhà ở phố</option>
+									<option value="2">Mẫu nhà ở ngoại thành</option>
+									<option value="3">Mẫu biệt thự</option>
+									<option value="4">Mẫu khách sạn</option>
 								</select>
 							</div>
 
 							<div class="mt-4">
-								<h6 class="filter-form-small-title">Price range</h6>
+								<h6 class="filter-form-small-title">Giá</h6>
 
 								<div class="form-check">
 									<input name="price-range[]" type="checkbox"
 										class="form-check-input" id="PriceCheckOne" value="500"
 										checked> <label class="form-check-label"
-										for="PriceCheckOne">below $1,000</label>
+										for="PriceCheckOne">Dưới $1,000</label>
 								</div>
 
 								<div class="form-check">
@@ -109,59 +110,26 @@ Bootstrap 5 HTML CSS Template
 										- $30,000</label>
 								</div>
 							</div>
-
+							
 							<div class="mt-4">
-								<h6 class="filter-form-small-title">Condition</h6>
-
-								<div class="form-check">
-									<input name="condition[]" type="checkbox"
-										class="form-check-input" id="ConditionCheckOne" value="all"
-										checked> <label class="form-check-label"
-										for="ConditionCheckOne">All</label>
-								</div>
-
-								<div class="form-check">
-									<input name="condition[]" type="checkbox"
-										class="form-check-input" id="ConditionCheckTwo"
-										value="excellent"> <label class="form-check-label"
-										for="ConditionCheckTwo">Excellent</label>
-								</div>
-
-								<div class="form-check">
-									<input name="condition[]" type="checkbox"
-										class="form-check-input" id="ConditionCheckThree"
-										value="better"> <label class="form-check-label"
-										for="ConditionCheckThree">Better</label>
-								</div>
-
-								<div class="form-check">
-									<input name="condition[]" type="checkbox"
-										class="form-check-input" id="ConditionCheckFour" value="good">
-
-									<label class="form-check-label" for="ConditionCheckFour">Good</label>
-								</div>
-							</div>
-
-							<div class="mt-4">
-								<h6 class="filter-form-small-title">Type</h6>
+								<h6 class="filter-form-small-title">Phong cách</h6>
 
 								<div class="form-check">
 									<input name="condition[]" type="checkbox"
 										class="form-check-input" id="TypeCheckOne" value="" checked>
 
-									<label class="form-check-label" for="TypeCheckOne">Single</label>
+									<label class="form-check-label" for="TypeCheckOne">Cổ điển</label>
 								</div>
 
 								<div class="form-check">
 									<input name="condition[]" type="checkbox"
 										class="form-check-input" id="TypeCheckTwo" value=""> <label
-										class="form-check-label" for="TypeCheckTwo">Family</label>
+										class="form-check-label" for="TypeCheckTwo">Hiện đại</label>
 								</div>
 							</div>
 
 							<div class="mt-4">
-								<button type="submit" class="form-control">Apple
-									Filters</button>
+								<button type="submit" class="form-control">Áp dụng</button>
 							</div>
 						</form>
 					</div>
@@ -179,7 +147,7 @@ Bootstrap 5 HTML CSS Template
 								<div class="shop-thumb">
 									<div class="shop-image-wrap">
 										<a href="shop-detail.html"> <img
-											src="images/shop/minimal-bathroom-interior-design-with-wooden-furniture.jpg"
+											src="/images/shop1.png"
 											class="shop-image img-fluid" alt="">
 										</a>
 
@@ -202,7 +170,7 @@ Bootstrap 5 HTML CSS Template
 									</div>
 
 									<div class="shop-body">
-										<h4>Bathroom</h4>
+										<h4>Nhà phố 2 tầng 4 phòng ngủ 8x16.75m</h4>
 									</div>
 								</div>
 							</div>
@@ -211,7 +179,7 @@ Bootstrap 5 HTML CSS Template
 								<div class="shop-thumb">
 									<div class="shop-image-wrap">
 										<a href="shop-detail.html"> <img
-											src="images/shop/mock-up-poster-modern-dining-room-interior-design-with-white-empty-wall.jpg"
+											src="/images/shop2.jpg"
 											class="shop-image img-fluid" alt="">
 										</a>
 
@@ -234,7 +202,7 @@ Bootstrap 5 HTML CSS Template
 									</div>
 
 									<div class="shop-body">
-										<h4>Dining</h4>
+										<h4>Mẫu nhà 3 tầng 4 phòng ngủ 5x16m</h4>
 									</div>
 								</div>
 							</div>
@@ -243,7 +211,7 @@ Bootstrap 5 HTML CSS Template
 								<div class="shop-thumb">
 									<div class="shop-image-wrap">
 										<a href="shop-detail.html"> <img
-											src="images/shop/green-sofa-white-living-room-with-blank-table-mockup.jpg"
+											src="/images/shop3.png"
 											class="shop-image img-fluid" alt="">
 										</a>
 
@@ -266,7 +234,7 @@ Bootstrap 5 HTML CSS Template
 									</div>
 
 									<div class="shop-body">
-										<h4>Living Room</h4>
+										<h4>Mẫu nhà phố 2 tầng 7x23m 3 phòng ngủ</h4>
 									</div>
 								</div>
 							</div>
@@ -275,7 +243,7 @@ Bootstrap 5 HTML CSS Template
 								<div class="shop-thumb">
 									<div class="shop-image-wrap">
 										<a href="shop-detail.html"> <img
-											src="images/shop/concept-home-cooking-with-female-chef.jpg"
+											src="/images/shop4.png"
 											class="shop-image img-fluid" alt="">
 										</a>
 
@@ -298,7 +266,7 @@ Bootstrap 5 HTML CSS Template
 									</div>
 
 									<div class="shop-body">
-										<h4>Chef Kitchen</h4>
+										<h4>Mẫu nhà phố 2 tầng 3 phòng ngủ 8x11m</h4>
 									</div>
 								</div>
 							</div>

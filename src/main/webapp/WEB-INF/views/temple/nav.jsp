@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="utf-8">
 <title></title>
 </head>
 <body>
@@ -20,21 +20,21 @@
 				<div class="collapse navbar-collapse float-end" id="navbarNav">
 					<ul class="navbar-nav ms-auto">
 						<li class="nav-item"><a class="nav-link click-scroll"
-							href="/home"><i class="bi bi-house"></i> Home</a></li>
+							href="/home"><i class="bi bi-house"></i> Trang chủ</a></li>
 
 						<li class="nav-item"><a class="nav-link click-scroll"
-							href="/about"><i class="bi bi-exclamation"></i> About</a></li>
+							href="/about"><i class="bi bi-exclamation"></i>Giới thiệu</a></li>
 
 						<li class="nav-item"><a class="nav-link click-scroll"
-							href="/shop"><i class="bi bi-shop"></i> Shop</a></li>
+							href="/shop"><i class="bi bi-shop"></i> Sản phẩm</a></li>
 							
 						<li class="nav-item"><a class="nav-link click-scroll"
-							href="/contact"><i class="bi bi-chat"></i> Contact</a></li>
+							href="/contact"><i class="bi bi-chat"></i> Liên hệ</a></li>
 							
 						<li class="nav-item"><a class="nav-link click-scroll"
-							href="/cart"><i class="bi bi-cart"></i> Cart</a></li>
+							href="/cart"><i class="bi bi-cart"></i> Giỏ hàng</a></li>
 						<li class="nav-item"><a class="nav-link click-scroll"
-							href="/profile"><i class="bi bi-person"></i> User</a></li>
+							href="/profile"><i class="bi bi-person"></i> Tài khoản</a></li>
 					</ul>
 				</div>
 		</div>

@@ -1,5 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,6 +18,7 @@
 <link href="css/bootstrap-icons.css" rel="stylesheet">
 <link href="css/owl.carousel.min.css" rel="stylesheet">
 <link href="css/tooplate-moso-interior.css" rel="stylesheet">
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
 <style type="text/css">
 body {
 	margin-top: 20px;
@@ -711,10 +712,7 @@ body {
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/temple/nav.jsp"></jsp:include>
-	<main>
-		<link
-			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"
-			rel="stylesheet">
+	<main class="mt-5">
 		<section id="content" class="container">
 			<!-- Begin .page-heading -->
 			<div class="page-heading">
