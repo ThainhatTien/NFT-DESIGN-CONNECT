@@ -30,9 +30,9 @@
 				<div class="row">
 
 					<div class="col-lg-12 col-12">
-						<small class="section-small-title">Ask anything.</small>
+						<small class="section-small-title">Hỏi bất kì điều gì.</small>
 
-						<h2 class="mb-4">Say Hello</h2>
+						<h2 class="mb-4">Xin chào</h2>
 					</div>
 
 					<div class="col-lg-6 col-12">
@@ -70,7 +70,7 @@
 							</div>
 
 							<div class="col-lg-3 col-md-4 col-6">
-								<button type="submit" class="form-control">Send</button>
+								<button type="submit" class="form-control">Gửi</button>
 							</div>
 						</form>
 					</div>
@@ -78,13 +78,13 @@
 					<div class="col-lg-6 col-12 mt-5 mt-lg-0">
 						<div class="custom-block">
 
-							<h3 class="text-white mb-2">Store</h3>
+							<h3 class="text-white mb-2">Cửa hàng</h3>
 
 							<p class="text-white mb-2">
 								<i class="contact-icon bi-geo-alt me-1"></i> FPT PolyTeachnic
 							</p>
 
-							<h3 class="text-white mt-3 mb-2">Contact Info</h3>
+							<h3 class="text-white mt-3 mb-2">Liên hệ</h3>
 
 							<div class="d-flex flex-wrap">
 								<p class="text-white mb-2 me-4">

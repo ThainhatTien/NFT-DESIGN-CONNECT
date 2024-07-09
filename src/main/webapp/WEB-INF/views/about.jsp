@@ -27,7 +27,7 @@
 				<div class="row align-items-center">
 
 					<div class="col-lg-5 col-12">
-						<small class="section-small-title">Our Story</small>
+						<small class="section-small-title">Giới thiệu về chúng tôi</small>
 
 						<h2 class="mt-2 mb-4">
 							<span class="text-muted">NFT </span> Design Connect

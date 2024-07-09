@@ -1,37 +1,57 @@
-//jquery-click-scroll
-//by syamsul'isul' Arifin
+$(document).ready(function() {
+    var sectionArray = ['home', 'about', 'shop', 'contact', 'cart', 'profile'];
 
-var sectionArray = [1, 2, 3, 4, 5];
+    // Click scroll
+    $.each(sectionArray, function(index, value) {
+        $('.click-scroll[href="/' + value + '"]').click(function(e) {
+            var targetElement = $('#' + value);
+            if (targetElement.length) {
+                var offsetClick = targetElement.offset().top - 70;
+                e.preventDefault();
+                $('html, body').animate({
+                    'scrollTop': offsetClick
+                }, 300);
 
-$.each(sectionArray, function(index, value){
-          
-     $(document).scroll(function(){
-         var offsetSection = $('#' + 'section_' + value).offset().top - 70;
-         var docScroll = $(document).scrollTop();
-         var docScroll1 = docScroll + 1;
-         
-        
-         if ( docScroll1 >= offsetSection ){
-             $('.navbar-nav .nav-item .nav-link').removeClass('active');
-             $('.navbar-nav .nav-item .nav-link:link').addClass('inactive');  
-             $('.navbar-nav .nav-item .nav-link').eq(index).addClass('active');
-             $('.navbar-nav .nav-item .nav-link').eq(index).removeClass('inactive');
-         }
-         
-     });
-    
-    $('.click-scroll').eq(index).click(function(e){
-        var offsetClick = $('#' + 'section_' + value).offset().top - 70;
-        e.preventDefault();
-        $('html, body').animate({
-            'scrollTop':offsetClick
-        }, 300)
+                // Add active class to clicked item and remove from others
+                $('.navbar-nav .nav-link').removeClass('active');
+                $(this).addClass('active');
+            }
+        });
     });
-    
-});
 
-$(document).ready(function(){
-    $('.navbar-nav .nav-item .nav-link:link').addClass('inactive');    
-    $('.navbar-nav .nav-item .nav-link').eq(0).addClass('active');
-    $('.navbar-nav .nav-item .nav-link:link').eq(0).removeClass('inactive');
+    // Scroll spy
+    $(window).scroll(function() {
+        var docScroll = $(window).scrollTop();
+        $.each(sectionArray, function(index, value) {
+            var targetElement = $('#' + value);
+            if (targetElement.length) {
+                var offsetSection = targetElement.offset().top - 70;
+                if (docScroll + 1 >= offsetSection) {
+                    $('.navbar-nav .nav-link').removeClass('active');
+                    $('.navbar-nav .nav-link[href="/' + value + '"]').addClass('active');
+                }
+            }
+        });
+    });
+
+    // Initial active state
+    $('.navbar-nav .nav-item .nav-link').addClass('inactive');
+    $('.navbar-nav .nav-item .nav-link[href="/home"]').addClass('active').removeClass('inactive');
+    
+    // Scroll spy to show/hide navbar
+    var lastScrollTop = 0;
+    var delta = 5; // Threshold for scroll down/up detection
+
+    $(window).scroll(function(event) {
+        var st = $(this).scrollTop();
+
+        // Scroll down
+        if (st > lastScrollTop && st > delta) {
+            $('.navbar').addClass('hidden');
+        } else {
+            // Scroll up or top of page
+            $('.navbar').removeClass('hidden');
+        }
+        lastScrollTop = st;
+    });
 });

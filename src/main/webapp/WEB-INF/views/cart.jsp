@@ -21,7 +21,7 @@
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/temple/nav.jsp"></jsp:include>
-	<main class="">
+	<main class="pt-5">
 		<div class="container mt-5">
 			<h1 class="text-center mb-4" style="color: #212529;">Shopping
 				Cart</h1>
@@ -53,8 +53,7 @@
 											onchange="updateItemQuantity(${item.value.gameId}, this.value)">
 										</td>
 										<td id="total-${item.value.gameId}">${item.value.price * item.value.quantity}</td>
-										<td><button
-												onclick="removeItemFromCart(${item.value.gameId})">Remove</button></td>
+										<td><button class="btn btn-danger" onclick="removeItemFromCart(${item.value.gameId})">Xóa</button></td>
 									</tr>
 								</c:forEach>
 							</tbody>
@@ -65,7 +64,7 @@
 						</p>
 						<!-- Button trigger modal -->
 						<button type="button" class="btn btn-primary"
-							data-bs-toggle="modal" data-bs-target="#exampleModal">Pay Ment</button>
+							data-bs-toggle="modal" data-bs-target="#exampleModal">Thanh toán</button>
 						<!-- Modal -->
 						<div class="modal fade" id="exampleModal" tabindex="-1"
 							aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -112,7 +111,7 @@
 										<form action="/checkout/${currentUser.getUserId()}"
 											method="get">
 											<input type="hidden" value="${currentUser.getUserId()}">
-											<button type="submit" class="btn btn-primary">Pay Ment</button>
+											<button type="submit" class="btn btn-primary">Thanh toán</button>
 										</form>
 									</div>
 								</div>
@@ -120,7 +119,7 @@
 						</div>
 					</c:if>
 					<a href="/home" class="btn btn-warning btn-md mb-3 mt-3">
-						<i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Back Home
+						<i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Quay về trang chủ
 					</a>
 				</div>
 			</div>

@@ -20,13 +20,14 @@
 	href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;600;700&display=swap"
 	rel="stylesheet">
 
-<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/bootstrap.min.css" rel="stylesheet">
 
-<link href="css/bootstrap-icons.css" rel="stylesheet">
+<link href="/css/bootstrap-icons.css" rel="stylesheet">
 
-<link href="css/owl.carousel.min.css" rel="stylesheet">
+<link href="/css/owl.carousel.min.css" rel="stylesheet">
 
-<link href="css/tooplate-moso-interior.css" rel="stylesheet">
+<link href="/css/tooplate-moso-interior.css" rel="stylesheet">
+
 <style type="text/css">
 .icon-hover:hover {
 	border-color: #3b71ca !important;
@@ -38,15 +39,7 @@
 	color: #3b71ca !important;
 }
 </style>
-<!--
 
-Tooplate 2133 Moso Interior
-
-https://www.tooplate.com/view/2133-moso-interior
-
-Bootstrap 5 HTML CSS Template
-
--->
 </head>
 
 <body class="shop-detail-page">
@@ -60,7 +53,7 @@ Bootstrap 5 HTML CSS Template
 				<div class="row">
 
 					<div class="col-lg-12 col-12">
-						<a href="/profile"><h1 class="text-white">Product Detail</h1></a>
+						<a href="/profileDesign/${nft.designer.user_id}"><h1 class="text-white">${nft.name}</h1></a>
 					</div>
 
 				</div>
@@ -78,7 +71,7 @@ Bootstrap 5 HTML CSS Template
 								href="#">
 								<img style="max-width: 100%; max-height: 100vh; margin: auto;"
 								class="rounded-4 fit"
-								src="/images/1.png" />
+								src="/images/${nft.images }" />
 							</a>
 						</div>
 						<div class="d-flex justify-content-center mb-3">
@@ -120,7 +113,7 @@ Bootstrap 5 HTML CSS Template
 					<main class="col-lg-6">
 						<div class="ps-lg-3">
 							<h4 class="title text-dark">
-								NHÀ Ở 1 TẦNG, 20.5X9.5M
+								${nft.name}
 							</h4>
 							<div class="d-flex flex-row my-3">
 								<div class="text-warning mb-1 me-2">
@@ -132,37 +125,27 @@ Bootstrap 5 HTML CSS Template
 							</div>
 
 							<div class="mb-3">
-								<span class="h5">$75.00</span>
+								<span class="h5">${nft.price } VNĐ</span>
 							</div>
 
-							<p>Modern look and quality demo item is a streetwear-inspired
-								collection that continues to break away from the conventions of
-								mainstream fashion. Made in Italy, these black and brown
-								clothing low-top shirts for men.</p>
+							<p>${nft.description}</p>
 
 							<div class="row">
 								<dt class="col-3">Mẫu nhà:</dt>
-								<dd class="col-9">Nhà cấp 4</dd>
+								<dd class="col-9">${nft.category.name}</dd>
 
 								<dt class="col-3">Phong cách</dt>
-								<dd class="col-9">Hiện đại</dd>
-
-								<dt class="col-3">Loại hình</dt>
-								<dd class="col-9">Nhà phố</dd>
+								<dd class="col-9">${nft.style.name}</dd>
 
 								<dt class="col-3">Nhà thiết kế</dt>
-								<dd class="col-9">Tiến Designer</dd>
+								<a href="/profileDesign/${nft.designer.user_id}" class="col-9"><dd class="">${nft.designer.username}</dd></a>
 							</div>
 
 							<hr />
 							
-							<a href="#" class="btn btn-warning shadow-0"> Buy now </a> <a
-								href="#" class="btn btn-primary shadow-0"> <i
-								class="me-1 fa fa-shopping-basket"></i> Add to cart
-							</a> <a href="#"
-								class="btn btn-light border border-secondary py-2 icon-hover px-3">
-								<i class="me-1 fa fa-heart fa-lg"></i> Save
-							</a>
+							<a href="#" class="btn btn-warning shadow-0"> Buy now </a> 
+							<a href="#" class="btn btn-primary shadow-0"> Add to cart </a> 
+							<a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> Save </a>
 						</div>
 					</main>
 				</div>
@@ -186,43 +169,43 @@ Bootstrap 5 HTML CSS Template
 									<table class="table border mt-3 mb-2">
 										<tr>
 											<th class="py-2">Số tần:</th>
-											<td class="py-2">1</td>
+											<td class="py-2">${nft.specifications.floors} tầng</td>
+										</tr>
+										<tr>
+											<th class="py-2">Số phòng ngủ:</th>
+											<td class="py-2">${nft.specifications.bedrooms} phòng</td>
 										</tr>
 										<tr>
 											<th class="py-2">Diện tích:</th>
-											<td class="py-2">200m2</td>
+											<td class="py-2">${nft.specifications.area} m2</td>
 										</tr>
 										<tr>
 											<th class="py-2">Chiều dài:</th>
-											<td class="py-2">9.5m</td>
+											<td class="py-2">${nft.specifications.length} m</td>
 										</tr>
 										<tr>
 											<th class="py-2">Phong cách</th>
-											<td class="py-2">Hiện đại</td>
+											<td class="py-2">${nft.style.name}</td>
 										</tr>
 										<tr>
 											<th class="py-2">Thiết kế bởi</th>
-											<td class="py-2">Tiến Designer</td>
-										</tr>
-										<tr>
-											<th class="py-2">Phòng ngủ:</th>
-											<td class="py-2">4</td>
+											<td class="py-2">${nft.designer.username}</td>
 										</tr>
 										<tr>
 											<th class="py-2">Mặt tiền:</th>
-											<td class="py-2">20.0m</td>
+											<td class="py-2">${nft.specifications.frontage} m</td>
 										</tr>
 										<tr>
-											<th class="py-2">Loại hình:</th>
-											<td class="py-2">Nhà phố</td>
+											<th class="py-2">Mẫu nhà:</th>
+											<td class="py-2">${nft.category.name}</td>
 										</tr>
 										<tr>
 											<th class="py-2">Chi phí</th>
-											<td class="py-2">7.5$</td>
+											<td class="py-2">${nft.price } VNĐ</td>
 										</tr>
 										<tr>
 											<th class="py-2">Mã sản phẩm</th>
-											<td class="py-2">SP001</td>
+											<td class="py-2">${nft.nft_id}</td>
 										</tr>
 									</table>
 								</div>
@@ -302,12 +285,12 @@ Bootstrap 5 HTML CSS Template
 
 
 	<!-- JAVASCRIPT FILES -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/click-scroll.js"></script>
-	<script src="js/jquery.backstretch.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/custom.js"></script>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/click-scroll.js"></script>
+	<script src="/js/jquery.backstretch.min.js"></script>
+	<script src="/js/owl.carousel.min.js"></script>
+	<script src="/js/custom.js"></script>
 
 </body>
 </html>

@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -27,15 +30,7 @@
 <link href="css/owl.carousel.min.css" rel="stylesheet">
 
 <link href="css/tooplate-moso-interior.css" rel="stylesheet">
-<!--
 
-Tooplate 2133 Moso Interior
-
-https://www.tooplate.com/view/2133-moso-interior
-
-Bootstrap 5 HTML CSS Template
-
--->
 </head>
 
 <body class="shop-listing-page">
@@ -49,7 +44,7 @@ Bootstrap 5 HTML CSS Template
 				<div class="row">
 
 					<div class="col-lg-12 col-12">
-						<h1 class="text-white">Shop</h1>
+						<h1 class="text-white">Cửa hàng</h1>
 					</div>
 
 				</div>
@@ -64,16 +59,11 @@ Bootstrap 5 HTML CSS Template
 						<form class="custom-form filter-form" action="#" method="get"
 							role="form">
 							<div class="">
-								<h6 class="filter-form-small-title">Product</h6>
-
-								<select name="looking-for" class="form-select form-control"
-									id="looking-for" aria-label="Default select example">
-									<option value="0" selected>Những gì bạn đang tìm kiếm?</option>
-									<option value="1">Mẫu nhà ở phố</option>
-									<option value="2">Mẫu nhà ở ngoại thành</option>
-									<option value="3">Mẫu biệt thự</option>
-									<option value="4">Mẫu khách sạn</option>
-								</select>
+								<h6 class="filter-form-small-title">Bản thiết kế</h6>
+								<form:select path="categories" class="form-select form-control">
+									<form:options items="${categories}" itemValue="category_id"
+										itemLabel="name" />
+								</form:select>
 							</div>
 
 							<div class="mt-4">
@@ -110,21 +100,13 @@ Bootstrap 5 HTML CSS Template
 										- $30,000</label>
 								</div>
 							</div>
-							
+
 							<div class="mt-4">
 								<h6 class="filter-form-small-title">Phong cách</h6>
 
 								<div class="form-check">
-									<input name="condition[]" type="checkbox"
-										class="form-check-input" id="TypeCheckOne" value="" checked>
-
-									<label class="form-check-label" for="TypeCheckOne">Cổ điển</label>
-								</div>
-
-								<div class="form-check">
-									<input name="condition[]" type="checkbox"
-										class="form-check-input" id="TypeCheckTwo" value=""> <label
-										class="form-check-label" for="TypeCheckTwo">Hiện đại</label>
+									<form:checkboxes class="me-3" items="${styles}" path="styles"
+										itemValue="style_id" itemLabel="name" />
 								</div>
 							</div>
 
@@ -135,141 +117,46 @@ Bootstrap 5 HTML CSS Template
 					</div>
 
 					<div class="col-lg-7 col-md-6 col-12">
-						<h2>Products</h2>
+						<h2>Bản thiết kế</h2>
 
 						<p class="mb-5">
-							<strong>3,648 items</strong> are currently available
+							<strong>3,648 bản thiết kế</strong> phù hợp với yêu cầu của bạn
 						</p>
 
 						<div class="row">
+							<c:forEach var="nft" items="${nfts }">
+								<div class="col-lg-6 col-12">
+									<div class="shop-thumb">
+										<div class="shop-image-wrap">
+											<a href="shop-detail.html"> <img
+												src="/images/${nft.images }" class="shop-image img-fluid"
+												alt="">
+											</a>
 
-							<div class="col-lg-6 col-12">
-								<div class="shop-thumb">
-									<div class="shop-image-wrap">
-										<a href="shop-detail.html"> <img
-											src="/images/shop1.png"
-											class="shop-image img-fluid" alt="">
-										</a>
+											<div class="shop-icons-wrap">
+												<div
+													class="shop-icons d-flex flex-column align-items-center">
+													<a href="#" class="shop-icon bi-heart"></a>
+												</div>
 
-										<div class="shop-icons-wrap">
-											<div class="shop-icons d-flex flex-column align-items-center">
-												<a href="#" class="shop-icon bi-heart"></a> <a href="#"
-													class="shop-icon bi-bookmark"></a>
+												<p class="shop-pricing mb-0 mt-3">
+													<span class="badge custom-badge">${nft.price } VNĐ</span>
+												</p>
 											</div>
 
-											<p class="shop-pricing mb-0 mt-3">
-												<span class="badge custom-badge">$8,200</span>
-											</p>
-										</div>
-
-										<div class="shop-btn-wrap">
-											<a href="/shopdetail"
-												class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn
-												more</a>
-										</div>
-									</div>
-
-									<div class="shop-body">
-										<h4>Nhà phố 2 tầng 4 phòng ngủ 8x16.75m</h4>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-lg-6 col-12">
-								<div class="shop-thumb">
-									<div class="shop-image-wrap">
-										<a href="shop-detail.html"> <img
-											src="/images/shop2.jpg"
-											class="shop-image img-fluid" alt="">
-										</a>
-
-										<div class="shop-icons-wrap">
-											<div class="shop-icons d-flex flex-column align-items-center">
-												<a href="#" class="shop-icon bi-heart"></a> <a href="#"
-													class="shop-icon bi-bookmark"></a>
+											<div class="shop-btn-wrap">
+												<a href="/shopdetail/${nft.nft_id}"
+													class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn
+													more</a>
 											</div>
-
-											<p class="shop-pricing mb-0 mt-3">
-												<span class="badge custom-badge">$4,800</span>
-											</p>
 										</div>
 
-										<div class="shop-btn-wrap">
-											<a href="shop-detail.html"
-												class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn
-												more</a>
+										<div class="shop-body">
+											<h4>${nft.name }</h4>
 										</div>
-									</div>
-
-									<div class="shop-body">
-										<h4>Mẫu nhà 3 tầng 4 phòng ngủ 5x16m</h4>
 									</div>
 								</div>
-							</div>
-
-							<div class="col-lg-6 col-12">
-								<div class="shop-thumb">
-									<div class="shop-image-wrap">
-										<a href="shop-detail.html"> <img
-											src="/images/shop3.png"
-											class="shop-image img-fluid" alt="">
-										</a>
-
-										<div class="shop-icons-wrap">
-											<div class="shop-icons d-flex flex-column align-items-center">
-												<a href="#" class="shop-icon bi-heart"></a> <a href="#"
-													class="shop-icon bi-bookmark"></a>
-											</div>
-
-											<p class="shop-pricing mb-0 mt-3">
-												<span class="badge custom-badge">$2,400</span>
-											</p>
-										</div>
-
-										<div class="shop-btn-wrap">
-											<a href="shop-detail.html"
-												class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn
-												more</a>
-										</div>
-									</div>
-
-									<div class="shop-body">
-										<h4>Mẫu nhà phố 2 tầng 7x23m 3 phòng ngủ</h4>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-lg-6 col-12">
-								<div class="shop-thumb">
-									<div class="shop-image-wrap">
-										<a href="shop-detail.html"> <img
-											src="/images/shop4.png"
-											class="shop-image img-fluid" alt="">
-										</a>
-
-										<div class="shop-icons-wrap">
-											<div class="shop-icons d-flex flex-column align-items-center">
-												<a href="#" class="shop-icon bi-heart"></a> <a href="#"
-													class="shop-icon bi-bookmark"></a>
-											</div>
-
-											<p class="shop-pricing mb-0 mt-3">
-												<span class="badge custom-badge">$6,500</span>
-											</p>
-										</div>
-
-										<div class="shop-btn-wrap">
-											<a href="shop-detail.html"
-												class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn
-												more</a>
-										</div>
-									</div>
-
-									<div class="shop-body">
-										<h4>Mẫu nhà phố 2 tầng 3 phòng ngủ 8x11m</h4>
-									</div>
-								</div>
-							</div>
+							</c:forEach>
 
 							<nav aria-label="Page navigation example">
 								<ul class="pagination justify-content-center">

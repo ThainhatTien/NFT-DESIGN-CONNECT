@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt"%>
 <!doctype html>
 <html lang="en">
 <head>
@@ -23,7 +26,7 @@
 <body>
 	<jsp:include page="/WEB-INF/views/temple/nav.jsp"></jsp:include>
 	<main>
-	<jsp:include page="/WEB-INF/views/temple/section.jsp"></jsp:include>	
+		<jsp:include page="/WEB-INF/views/temple/section.jsp"></jsp:include>
 
 		<!-- <section class="featured-section section-padding">
 			<div class="container">
@@ -66,169 +69,42 @@
 						<small class="section-small-title">NTF Design Connect</small>
 
 						<h2 class="mt-2 mb-4">
-							<span class="tooplate-red">Hot</span> Products
+							<span class="tooplate-red">Nổi</span> Bật
 						</h2>
 					</div>
 
-					<div class="col-lg-6 col-12">
-						<div class="shop-thumb">
-							<div class="shop-image-wrap">
-								<a href="/shopdetail"> <img
-									src="/images/nb1.png"
-									class="shop-image img-fluid" alt="">
-								</a>
+					<c:forEach var="nft" items="${nfts}">
+						<div class="col-lg-4 col-12">
+							<div class="shop-thumb">
+								<div class="shop-image-wrap">
+									<a href="shop-detail.html"> <img
+										src="/images/${nft.images}" class="shop-image img-fluid"
+										alt="">
+									</a>
 
-								<div class="shop-icons-wrap">
-									<div class="shop-icons d-flex flex-column align-items-center">
-										<a href="#" class="shop-icon bi-heart"></a> <a href="#"
-											class="shop-icon bi-bookmark"></a>
+									<div class="shop-icons-wrap">
+										<div class="shop-icons d-flex flex-column align-items-center">
+											<a href="/" class="shop-icon bi-heart"></a>
+										</div>
+
+										<p class="shop-pricing mb-0 mt-3">
+											<span class="badge custom-badge">${nft.price } VNĐ</span>
+										</p>
 									</div>
 
-									<p class="shop-pricing mb-0 mt-3">
-										<span class="badge custom-badge">$3,600</span>
-									</p>
-								</div>
-
-								<div class="shop-btn-wrap">
-									<a href="/shopdetail"
-										class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn
-										more</a>
-								</div>
-							</div>
-
-							<div class="shop-body">
-								<h4>Nhà phố 2 tầng 4 phòng ngủ 8x16.75m</h4>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-6 col-12">
-						<div class="shop-thumb">
-							<div class="shop-image-wrap">
-								<a href="shop-detail.html"> <img
-									src="/images/nb2.jpg"
-									class="shop-image img-fluid" alt="">
-								</a>
-
-								<div class="shop-icons-wrap">
-									<div class="shop-icons d-flex flex-column align-items-center">
-										<a href="#" class="shop-icon bi-heart"></a> <a href="#"
-											class="shop-icon bi-bookmark"></a>
+									<div class="shop-btn-wrap">
+										<a href="/shopdetail/${nft.nft_id}"
+											class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn
+											more</a>
 									</div>
-
-									<p class="shop-pricing mb-0 mt-3">
-										<span class="badge custom-badge">$6,400</span>
-									</p>
 								</div>
 
-								<div class="shop-btn-wrap">
-									<a href="shop-detail.html"
-										class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn
-										more</a>
+								<div class="shop-body">
+									<h4>${nft.name }</h4>
 								</div>
-							</div>
-
-							<div class="shop-body">
-								<h4>Mẫu nhà 3 tầng 4 phòng ngủ 5x16m</h4>
 							</div>
 						</div>
-					</div>
-
-					<div class="col-lg-4 col-12">
-						<div class="shop-thumb">
-							<div class="shop-image-wrap">
-								<a href="shop-detail.html"> <img
-									src="/images/nb3.png"
-									class="shop-image img-fluid" alt="">
-								</a>
-
-								<div class="shop-icons-wrap">
-									<div class="shop-icons d-flex flex-column align-items-center">
-										<a href="#" class="shop-icon bi-heart"></a> <a href="#"
-											class="shop-icon bi-bookmark"></a>
-									</div>
-
-									<p class="shop-pricing mb-0 mt-3">
-										<span class="badge custom-badge">$2,400</span>
-									</p>
-								</div>
-
-								<div class="shop-btn-wrap">
-									<a href="shop-detail.html"
-										class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn
-										more</a>
-								</div>
-							</div>
-
-							<div class="shop-body">
-								<h4>Mẫu nhà phố 2 tầng 7x23m 3 phòng ngủ</h4>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-12">
-						<div class="shop-thumb">
-							<div class="shop-image-wrap">
-								<a href="shop-detail.html"> <img
-									src="/images/nb4.png"
-									class="shop-image img-fluid" alt="">
-								</a>
-
-								<div class="shop-icons-wrap">
-									<div class="shop-icons d-flex flex-column align-items-center">
-										<a href="#" class="shop-icon bi-heart"></a> <a href="#"
-											class="shop-icon bi-bookmark"></a>
-									</div>
-
-									<p class="shop-pricing mb-0 mt-3">
-										<span class="badge custom-badge">$3,800</span>
-									</p>
-								</div>
-
-								<div class="shop-btn-wrap">
-									<a href="shop-detail.html"
-										class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn
-										more</a>
-								</div>
-							</div>
-
-							<div class="shop-body">
-								<h4>Mẫu nhà phố 2 tầng 3 phòng ngủ 8x11m</h4>
-							</div>
-						</div>
-					</div>
-
-					<div class="col-lg-4 col-12">
-						<div class="shop-thumb">
-							<div class="shop-image-wrap">
-								<a href="shop-detail.html"> <img
-									src="/images/nb5.png"
-									class="shop-image img-fluid" alt="">
-								</a>
-
-								<div class="shop-icons-wrap">
-									<div class="shop-icons d-flex flex-column align-items-center">
-										<a href="#" class="shop-icon bi-heart"></a> <a href="#"
-											class="shop-icon bi-bookmark"></a>
-									</div>
-
-									<p class="shop-pricing mb-0 mt-3">
-										<span class="badge custom-badge">$850</span>
-									</p>
-								</div>
-
-								<div class="shop-btn-wrap">
-									<a href="shop-detail.html"
-										class="shop-btn custom-btn btn d-flex align-items-center align-items-center">Learn
-										more</a>
-								</div>
-							</div>
-
-							<div class="shop-body">
-								<h4>Mẫu nhà phố 2 tầng 9x18m 4 phòng ngủ</h4>
-							</div>
-						</div>
-					</div>
+					</c:forEach>
 
 					<div class="col-lg-12 col-12">
 						<nav aria-label="Page navigation example">
@@ -259,14 +135,15 @@
 			</div>
 		</section>
 
-		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-			<path fill="#36363e" fill-opacity="1"
-				d="M0,96L40,117.3C80,139,160,181,240,186.7C320,192,400,160,480,149.3C560,139,640,149,720,176C800,203,880,245,960,250.7C1040,256,1120,224,1200,229.3C1280,235,1360,277,1400,298.7L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
-	
+
 	</main>
+
+	<svg class="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+			<path fill="#36363e" fill-opacity="1"
+			d="M0,96L40,117.3C80,139,160,181,240,186.7C320,192,400,160,480,149.3C560,139,640,149,720,176C800,203,880,245,960,250.7C1040,256,1120,224,1200,229.3C1280,235,1360,277,1400,298.7L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
 	
 	<jsp:include page="/WEB-INF/views/temple/footer.jsp"></jsp:include>
-	
+
 	<!-- JAVASCRIPT FILES -->
 	<script src="js/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
