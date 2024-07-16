@@ -53,7 +53,8 @@
 				<div class="row">
 
 					<div class="col-lg-12 col-12">
-						<a href="/profileDesign/${nft.designer.user_id}"><h1 class="text-white">${nft.name}</h1></a>
+						<a href="/profileDesign/${nft.designer.user_id}">
+						<h1 class="text-white">${nft.name}</h1></a>
 					</div>
 
 				</div>
@@ -67,43 +68,31 @@
 					<aside class="col-lg-6">
 						<div class="border rounded-4 mb-3 d-flex justify-content-center">
 							<a data-fslightbox="mygalley" class="rounded-4" target="_blank"
-								data-type="image"
-								href="#">
-								<img style="max-width: 100%; max-height: 100vh; margin: auto;"
-								class="rounded-4 fit"
-								src="/images/${nft.images }" />
+								data-type="image" href="#"> <img
+								style="max-width: 100%; max-height: 100vh; margin: auto;"
+								class="rounded-4 fit" src="/images/${nft.images }" />
 							</a>
 						</div>
 						<div class="d-flex justify-content-center mb-3">
 							<a data-fslightbox="mygalley" class="border mx-1 rounded-2"
-								target="_blank" data-type="image"
-								href="#"
-								class="item-thumb"> <img width="60" height="60"
-								class="rounded-2"
+								target="_blank" data-type="image" href="#" class="item-thumb">
+								<img width="60" height="60" class="rounded-2"
 								src="/images/2.png" />
 							</a> <a data-fslightbox="mygalley" class="border mx-1 rounded-2"
-								target="_blank" data-type="image"
-								href="#"
-								class="item-thumb"> <img width="60" height="60"
-								class="rounded-2"
+								target="_blank" data-type="image" href="#" class="item-thumb">
+								<img width="60" height="60" class="rounded-2"
 								src="/images/3.png" />
 							</a> <a data-fslightbox="mygalley" class="border mx-1 rounded-2"
-								target="_blank" data-type="image"
-								href="#"
-								class="item-thumb"> <img width="60" height="60"
-								class="rounded-2"
+								target="_blank" data-type="image" href="#" class="item-thumb">
+								<img width="60" height="60" class="rounded-2"
 								src="/images/4.png" />
 							</a> <a data-fslightbox="mygalley" class="border mx-1 rounded-2"
-								target="_blank" data-type="image"
-								href="#"
-								class="item-thumb"> <img width="60" height="60"
-								class="rounded-2"
+								target="_blank" data-type="image" href="#" class="item-thumb">
+								<img width="60" height="60" class="rounded-2"
 								src="/images/5.png" />
 							</a> <a data-fslightbox="mygalley" class="border mx-1 rounded-2"
-								target="_blank" data-type="image"
-								href="#"
-								class="item-thumb"> <img width="60" height="60"
-								class="rounded-2"
+								target="_blank" data-type="image" href="#" class="item-thumb">
+								<img width="60" height="60" class="rounded-2"
 								src="/images/6.png" />
 							</a>
 						</div>
@@ -112,9 +101,7 @@
 					</aside>
 					<main class="col-lg-6">
 						<div class="ps-lg-3">
-							<h4 class="title text-dark">
-								${nft.name}
-							</h4>
+							<h4 class="title text-dark">${nft.name}</h4>
 							<div class="d-flex flex-row my-3">
 								<div class="text-warning mb-1 me-2">
 									<i class="fa fa-star"></i> <i class="fa fa-star"></i> <i
@@ -138,13 +125,14 @@
 								<dd class="col-9">${nft.style.name}</dd>
 
 								<dt class="col-3">Nhà thiết kế</dt>
-								<a href="/profileDesign/${nft.designer.user_id}" class="col-9"><dd class="">${nft.designer.username}</dd></a>
+								<a href="/profileDesign/${nft.designer.user_id}" class="col-9"><dd
+										class="">${nft.designer.username}</dd></a>
 							</div>
 
 							<hr />
-							
+
 							<a href="#" class="btn btn-warning shadow-0"> Buy now </a> 
-							<a href="#" class="btn btn-primary shadow-0"> Add to cart </a> 
+							<a href="/cart/add/${currentUser.getUser_id()}/${nft.nft_id}/${1}" class="btn btn-primary shadow-0"> Add to cart </a> 
 							<a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> Save </a>
 						</div>
 					</main>
@@ -169,19 +157,19 @@
 									<table class="table border mt-3 mb-2">
 										<tr>
 											<th class="py-2">Số tần:</th>
-											<td class="py-2">${nft.specifications.floors} tầng</td>
+											<td class="py-2">${nft.specifications.floors}tầng</td>
 										</tr>
 										<tr>
 											<th class="py-2">Số phòng ngủ:</th>
-											<td class="py-2">${nft.specifications.bedrooms} phòng</td>
+											<td class="py-2">${nft.specifications.bedrooms}phòng</td>
 										</tr>
 										<tr>
 											<th class="py-2">Diện tích:</th>
-											<td class="py-2">${nft.specifications.area} m2</td>
+											<td class="py-2">${nft.specifications.area}m2</td>
 										</tr>
 										<tr>
 											<th class="py-2">Chiều dài:</th>
-											<td class="py-2">${nft.specifications.length} m</td>
+											<td class="py-2">${nft.specifications.length}m</td>
 										</tr>
 										<tr>
 											<th class="py-2">Phong cách</th>
@@ -193,7 +181,7 @@
 										</tr>
 										<tr>
 											<th class="py-2">Mặt tiền:</th>
-											<td class="py-2">${nft.specifications.frontage} m</td>
+											<td class="py-2">${nft.specifications.frontage}m</td>
 										</tr>
 										<tr>
 											<th class="py-2">Mẫu nhà:</th>
@@ -201,7 +189,7 @@
 										</tr>
 										<tr>
 											<th class="py-2">Chi phí</th>
-											<td class="py-2">${nft.price } VNĐ</td>
+											<td class="py-2">${nft.price }VNĐ</td>
 										</tr>
 										<tr>
 											<th class="py-2">Mã sản phẩm</th>
@@ -219,50 +207,46 @@
 								<div class="card-body">
 									<h5 class="card-title">Một số bản thiết kế nổi bật</h5>
 									<div class="d-flex mb-3">
-										<a href="#" class="me-3"> <img
-											src="/images/nb1.png"
+										<a href="#" class="me-3"> <img src="/images/nb1.png"
 											style="min-width: 96px; height: 96px;"
 											class="img-md img-thumbnail" />
 										</a>
 										<div class="info">
-											<a href="#" class="nav-link mb-1">Nhà phố 2 tầng 4 phòng ngủ 8x16.75m
-											</a> <strong class="text-dark"> $38.90</strong>
+											<a href="#" class="nav-link mb-1">Nhà phố 2 tầng 4 phòng
+												ngủ 8x16.75m </a> <strong class="text-dark"> $38.90</strong>
 										</div>
 									</div>
 
 									<div class="d-flex mb-3">
-										<a href="#" class="me-3"> <img
-											src="/images/nb2.jpg"
+										<a href="#" class="me-3"> <img src="/images/nb2.jpg"
 											style="min-width: 96px; height: 96px;"
 											class="img-md img-thumbnail" />
 										</a>
 										<div class="info">
-											<a href="#" class="nav-link mb-1">Mẫu nhà 3 tầng 4 phòng ngủ 5x16m
-											</a> <strong class="text-dark"> $29.50</strong>
+											<a href="#" class="nav-link mb-1">Mẫu nhà 3 tầng 4 phòng
+												ngủ 5x16m </a> <strong class="text-dark"> $29.50</strong>
 										</div>
 									</div>
 
 									<div class="d-flex mb-3">
-										<a href="#" class="me-3"> <img
-											src="/images/nb3.png"
+										<a href="#" class="me-3"> <img src="/images/nb3.png"
 											style="min-width: 96px; height: 96px;"
 											class="img-md img-thumbnail" />
 										</a>
 										<div class="info">
-											<a href="#" class="nav-link mb-1">Mẫu nhà phố 2 tầng 7x23m 3 phòng ngủ</a> 
-											<strong class="text-dark">$120.00</strong>
+											<a href="#" class="nav-link mb-1">Mẫu nhà phố 2 tầng
+												7x23m 3 phòng ngủ</a> <strong class="text-dark">$120.00</strong>
 										</div>
 									</div>
 
 									<div class="d-flex">
-										<a href="#" class="me-3"> <img
-											src="/images/nb4.png"
+										<a href="#" class="me-3"> <img src="/images/nb4.png"
 											style="min-width: 96px; height: 96px;"
 											class="img-md img-thumbnail" />
 										</a>
 										<div class="info">
-											<a href="#" class="nav-link mb-1">Mẫu nhà phố 2 tầng 3 phòng ngủ 8x11m</a> 
-											<strong class="text-dark">$339.90</strong>
+											<a href="#" class="nav-link mb-1">Mẫu nhà phố 2 tầng 3
+												phòng ngủ 8x11m</a> <strong class="text-dark">$339.90</strong>
 										</div>
 									</div>
 								</div>

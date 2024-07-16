@@ -28,7 +28,7 @@ public class URLValidationFilter implements Filter {
 
 		// Kiểm tra nếu URL có dạng /cart/add//gameId/quantity
 		if (uri.matches("/cart/add//\\d+/\\d+")) {
-			httpResponse.sendRedirect("/login/user"); // Chuyển hướng đến trang đăng nhập
+			httpResponse.sendRedirect("redirect:/login"); // Chuyển hướng đến trang đăng nhập
 			return;
 		}
 		if (uri.matches("/index/order//\\d+")) {

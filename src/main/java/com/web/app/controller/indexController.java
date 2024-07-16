@@ -6,7 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
-
 import com.web.app.dao.CategoryDao;
 import com.web.app.dao.NFTDao;
 import com.web.app.dao.StyleDao;
@@ -17,8 +16,6 @@ import com.web.app.entity.Style;
 import com.web.app.entity.User;
 import com.web.app.service.SessionService;
 import com.web.app.service.UserService;
-
-import jakarta.servlet.http.HttpSession;
 
 @Controller
 public class indexController {

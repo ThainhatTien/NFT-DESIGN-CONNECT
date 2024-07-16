@@ -39,6 +39,7 @@ public class loginController {
 		if (user != null) {
 			sessionService.set("currentUser", user);
 			session.setAttribute("currentUser", user);
+			System.out.println(user);
 			return "redirect:/home";
 		} else {
 			model.addAttribute("message", "Sai tài khoản hoặc mật khẩu");

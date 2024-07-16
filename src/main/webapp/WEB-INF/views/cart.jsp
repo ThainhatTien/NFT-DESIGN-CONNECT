@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="utf-8"%>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<%@ taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jstl/fmt_rt" prefix="fmt"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,14 +13,14 @@
 <title>NFT Design Connect Cart</title>
 <!-- CSS FILES -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.gstatic.com">
 <link
 	href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;300;400;600;700&display=swap"
 	rel="stylesheet">
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<link href="css/bootstrap-icons.css" rel="stylesheet">
-<link href="css/owl.carousel.min.css" rel="stylesheet">
-<link href="css/tooplate-moso-interior.css" rel="stylesheet">
+<link href="/css/bootstrap.min.css" rel="stylesheet">
+<link href="/css/bootstrap-icons.css" rel="stylesheet">
+<link href="/css/owl.carousel.min.css" rel="stylesheet">
+<link href="/css/tooplate-moso-interior.css" rel="stylesheet">
 </head>
 <body>
 	<jsp:include page="/WEB-INF/views/temple/nav.jsp"></jsp:include>
@@ -30,7 +33,7 @@
 					<c:if test="${not empty message}">
 						<div class="alert alert-success">${message}</div>
 					</c:if>
-					<c:if test="${not empty cart.detail}">
+					<c:if test="${not empty cartItems}">
 						<table border="1" style="width: 100%;" class="table table-hover">
 							<thead>
 								<tr>
@@ -43,28 +46,34 @@
 								</tr>
 							</thead>
 							<tbody>
-								<c:forEach var="item" items="${cart.detail}" varStatus="status">
-									<tr id="row-${item.value.gameId}">
+								<c:forEach var="item" items="${cartItems}" varStatus="status">
+									<tr id="row-${item.nft.nft_id}">
 										<td>${status.index + 1}</td>
-										<td>${item.value.title}</td>
-										<td>${item.value.price}</td>
+										<td>${item.nft.name}</td>
+										<td>${item.price}</td>
 										<td><input type="number" name="quantity"
-											value="${item.value.quantity}" min="1"
-											onchange="updateItemQuantity(${item.value.gameId}, this.value)">
+											value="${item.quantity}" min="1"
+											onchange="updateItemQuantity(${item.nft.nft_id}, this.value)">
 										</td>
-										<td id="total-${item.value.gameId}">${item.value.price * item.value.quantity}</td>
-										<td><button class="btn btn-danger" onclick="removeItemFromCart(${item.value.gameId})">Xóa</button></td>
+										<td id="total-${item.nft.nft_id}"><fmt:formatNumber
+												value="${item.price * item.quantity}" type="currency"
+												currencySymbol="VND" /></td>
+										<td>
+											<button class="btn btn-danger"
+												onclick="removeItemFromCart(${item.nft.nft_id})">Xóa</button>
+										</td>
 									</tr>
 								</c:forEach>
 							</tbody>
 						</table>
 						<p class="" style="color: #212529;">
 							Tổng tiền:
-							<c:out value="${cart.totalAmount}" />
+							<c:out value="${totalAmount} VND" />
 						</p>
-						<!-- Button trigger modal -->
+						<%-- <!-- Button trigger modal -->
 						<button type="button" class="btn btn-primary"
-							data-bs-toggle="modal" data-bs-target="#exampleModal">Thanh toán</button>
+							data-bs-toggle="modal" data-bs-target="#exampleModal">Thanh
+							toán</button>
 						<!-- Modal -->
 						<div class="modal fade" id="exampleModal" tabindex="-1"
 							aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -88,54 +97,75 @@
 												</tr>
 											</thead>
 											<tbody>
-												<c:forEach var="item" items="${cart.detail}"
+												<c:forEach var="item" items="${cartItems}"
 													varStatus="status">
-													<tr id="row-${item.value.gameId}">
+													<tr id="row-${item.nftId}">
 														<td>${status.index + 1}</td>
-														<td>${item.value.title}</td>
-														<td>${item.value.price}</td>
-														<td>${item.value.quantity}</td>
-														<td id="total-${item.value.gameId}">${item.value.price * item.value.quantity}</td>
+														<td>${item.title}</td>
+														<td>${item.price}</td>
+														<td>${item.quantity}</td>
+														<td id="total-${item.nftId}">${item.price * item.quantity}</td>
 													</tr>
 												</c:forEach>
 											</tbody>
 										</table>
 										<p class="" style="color: #212529;">
 											Tổng tiền:
-											<c:out value="${cart.totalAmount}" />
+											<c:out value="${totalAmount}" />
 										</p>
 									</div>
 									<div class="modal-footer">
 										<button type="button" class="btn btn-secondary"
 											data-bs-dismiss="modal">Hủy</button>
-										<form action="/checkout/${currentUser.getUserId()}"
-											method="get">
-											<input type="hidden" value="${currentUser.getUserId()}">
-											<button type="submit" class="btn btn-primary">Thanh toán</button>
+										<form action="#" method="get">
+											<input type="hidden" value="${currentUser.userId}">
+											<button type="submit" class="btn btn-primary">Thanh
+												toán</button>
 										</form>
 									</div>
 								</div>
 							</div>
-						</div>
+						</div> --%>
 					</c:if>
-					<a href="/home" class="btn btn-warning btn-md mb-3 mt-3">
-						<i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Quay về trang chủ
+					<a href="/home" class="btn btn-warning btn-md mb-3 mt-3"> <i
+						class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp; Quay về
+						trang chủ
 					</a>
 				</div>
 			</div>
 		</div>
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-			<path fill="#36363e" fill-opacity="1"
-				d="M0,96L40,117.3C80,139,160,181,240,186.7C320,192,400,160,480,149.3C560,139,640,149,720,176C800,203,880,245,960,250.7C1040,256,1120,224,1200,229.3C1280,235,1360,277,1400,298.7L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path></svg>
+            <path fill="#36363e" fill-opacity="1"
+				d="M0,96L40,117.3C80,139,160,181,240,186.7C320,192,400,160,480,149.3C560,139,640,149,720,176C800,203,880,245,960,250.7C1040,256,1120,224,1200,229.3C1280,235,1360,277,1400,298.7L1440,320L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z"></path>
+        </svg>
 	</main>
 	<jsp:include page="/WEB-INF/views/temple/footer.jsp"></jsp:include>
 
 	<!-- JAVASCRIPT FILES -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/click-scroll.js"></script>
-	<script src="js/jquery.backstretch.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/custom.js"></script>
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+	<script src="/js/click-scroll.js"></script>
+	<script src="/js/jquery.backstretch.min.js"></script>
+	<script src="/js/owl.carousel.min.js"></script>
+	<script src="/js/custom.js"></script>
+	<script>
+		function updateItemQuantity(nftId, quantity) {
+			const userId = $
+			{
+				currentUser.user_id
+			}
+			; // Đổi thành user_id
+			window.location.href = `/cart/update/${userId}/${nftId}/${quantity}`;
+		}
+
+		function removeItemFromCart(nftId) {
+			const userId = $
+			{
+				currentUser.user_id
+			}
+			; // Đổi thành user_id
+			window.location.href = `/cart/remove/${userId}/${nftId}`;
+		}
+	</script>
 </body>
 </html>

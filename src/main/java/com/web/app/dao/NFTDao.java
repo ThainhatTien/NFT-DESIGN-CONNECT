@@ -9,4 +9,6 @@ import com.web.app.entity.NFT;
 public interface NFTDao extends JpaRepository<NFT, Integer> {
 	@Query("SELECT n FROM NFT n WHERE n.designer.user_id = :userId")
     List<NFT> findByUserId(@Param("userId") int userId);
+	
+	
 }

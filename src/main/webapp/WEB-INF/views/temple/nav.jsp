@@ -39,7 +39,7 @@
 								<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 									<li><a class="dropdown-item"
 										href="/profile/${currentUser.getUser_id()}">Trang cá nhân</a></li>
-									<li><a class="dropdown-item" href="/cart">Giỏ hàng</a></li>
+									<li><a class="dropdown-item" href="/cart/view/${currentUser.getUser_id()}">Giỏ hàng</a></li>
 									<li><a class="dropdown-item" href="#!doimatkhau">Đổi
 											mật khẩu</a></li>
 									<li><a class="dropdown-item" href="#!capnhatthongtin">Cập

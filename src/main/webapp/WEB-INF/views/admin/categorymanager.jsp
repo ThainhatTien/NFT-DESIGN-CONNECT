@@ -52,8 +52,8 @@
 							class="fa fa-sliders fa-fw"></i>Manage Category</a></li>
 					<li><a href="/home/style"><i class="fa fa-sliders fa-fw"></i>Manage
 							Style</a></li>
-					<li><a href="/index/revenue/admin"><i
-							class="fa fa-bar-chart fa-fw"></i>Revenue Report</a></li>
+					<li><a href="/home/nft"><i
+							class="fa fa-bar-chart fa-fw"></i>Manage NFT</a></li>
 					<li><a href="/form/admin/logout"><i
 							class="fa fa-eject fa-fw"></i>Sign Out</a></li>
 				</ul>
@@ -71,6 +71,14 @@
 					</nav>
 				</div>
 			</div>
+
+			<c:if test="${not empty error}">
+				<div class="alert alert-danger" role="alert">
+					<p class="text-center">${error }</p>
+					<a href="/home/category" class="float-end">Đồng ý</a>
+				</div>
+			</c:if>
+
 			<div class="templatemo-content-container">
 				<div class="templatemo-content-widget no-padding">
 					<div class="panel panel-default table-responsive">
@@ -94,9 +102,9 @@
 									<tr>
 										<td>${category.category_id}</td>
 										<td>${category.name}</td>
-										<td><a href="/admin/game/${category.category_id}"
+										<td><a href="/category/edit/${category.category_id}"
 											class="templatemo-edit-btn">Edit</a></td>
-										<td><a href="/admin/game/delete/${category.category_id}"
+										<td><a href="/category/delete/${category.category_id}"
 											class="templatemo-link">Delete</a></td>
 									</tr>
 								</c:forEach>
@@ -126,7 +134,7 @@
 										<button type="submit" class="templatemo-blue-button">Update</button>
 									</div>
 									<div class="form-group">
-										<button formaction="/admin/game/reset" type="submit"
+										<button formaction="/category/reset" type="submit"
 											class="templatemo-blue-button">Rest</button>
 									</div>
 								</form:form>
